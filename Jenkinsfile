@@ -8,7 +8,7 @@ pipeline {
         KILL_SCRIPT = "kill -9 \$(ps -ef | grep ${JAR_NAME} | grep -v grep | awk '{print \$2}')"
         RUN_USER = "trongduong"
         DEPLOY_FOLDER = "/home/trongduong/projects/deploy-be"
-        COPY_SCRIPT = "cp target/${JAR_NAME} ${DEPLOY_FOLDER}"
+        COPY_SCRIPT = "sudo cp target/${JAR_NAME} ${DEPLOY_FOLDER}"
         RUN_SCRIPT = "nohup java -jar ${DEPLOY_FOLDER}/${JAR_NAME} > ${DEPLOY_FOLDER}/app.log 2>&1 &"
     }
     stages {
