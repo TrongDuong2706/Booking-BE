@@ -1,1 +1,1 @@
-Change readme to test jenkinsfile 0.1
+Change readme to test jenkinsfile 0.2
