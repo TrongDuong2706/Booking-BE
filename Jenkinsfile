@@ -20,7 +20,7 @@ pipeline {
         stage('deploy') {
             steps {
                 sh(script: """ ${COPY_SCRIPT} """, label: "Copy the .jar file into deploy folder")
-                sh(script: """ ${KILL_SCRIPT} """, label: "Terminate the running process")
+//                 sh(script: """ ${KILL_SCRIPT} """, label: "Terminate the running process")
                 sh(script: """ sudo su - ${RUN_USER} -c 'cd ${DEPLOY_FOLDER}; ${RUN_SCRIPT}' """, label: "Run the application as user")
             }
         }
