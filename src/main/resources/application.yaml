@@ -41,6 +41,6 @@ payment:
     orderType: "other"
 redis:
   redisPort: 6379
-  redisHost: 127.0.0.1
+  redisHost: ${redis_host}
 email:
   email_key: ${email_key}
